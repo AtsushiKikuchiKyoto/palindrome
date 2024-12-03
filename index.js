@@ -41,8 +41,20 @@ function Phrase(content){
     return string.toLowerCase();
   };
 
+  // テスト用
   this.processedContent = function processedContent(){
-    return this.processor(this.content);
+    return this.letters().toLowerCase();
+  };
+  
+  // コンテンツの文字だけ返すletters()
+  this.letters = function letters(){
+    let theLetters = [];
+    for (let i = 0; i < this.content.length; i++){
+      if (this.content.charAt(i).match(/[a-zA-z]/)){
+        theLetters.push(this.content.charAt(i));
+      }
+    }
+    return theLetters.join("");
   };
 
   // パリンドローム判定メソッド

@@ -19,6 +19,15 @@ describe("Phrase", function(){
       assert(LUPalindrome.palindrome());
     });
 
-    it("パリンドロームに句読点があってもtrueを返す");
+    it("パリンドロームに句読点があってもtrueを返す",function(){
+      let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
+      assert(punctuatedPalindrome.palindrome());
+    });
+  });
+  describe("#letters", function(){
+    it("文字だけを返す", function(){
+      let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
+      assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
+    });
   });
 });
