@@ -54,7 +54,11 @@ function Phrase(content){
 
   // パリンドローム判定メソッド
   this.palindrome = function palindrome(){
-    return this.processedContent() === this.processedContent().reverse();
+    if (this.processedContent()) {
+      return this.processedContent() === this.processedContent().reverse();
+    } else {
+      return false;
+    };
   }
 
   // 練習問題:大文字変換メソッド
