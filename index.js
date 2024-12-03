@@ -48,7 +48,8 @@ function Phrase(content){
   
   // コンテンツの文字だけ返すletters()
   this.letters = function letters(){
-    return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
+    // return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
+    return (this.content.match(/[a-z]/gi) || []).join("");
   };
 
   // パリンドローム判定メソッド
