@@ -1,3 +1,5 @@
+module.exports = Phrase;
+
 // 文字列を逆順にして返す
 // function reverse(string){
 // return Array.from(string).reverse().join("");
