@@ -29,5 +29,10 @@ describe("Phrase", function(){
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
     });
+
+    it("マッチしない場合はから文字を返す",function(){
+      let noLetters = new Phrase("1234.56");
+      assert.strictEqual(noLetters.letters(), "");
+    });
   });
 });
